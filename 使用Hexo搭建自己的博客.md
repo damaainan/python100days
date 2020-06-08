@@ -289,39 +289,39 @@ hexo server -p 8000 -o
 
 2. 修改博客项目的配置文件`_config.yml`，配置使用GitHub来部署该博客项目。
 
-   ```Shell
-   vim _config.yml
-   ```
+```Shell
+vim _config.yml
+```
 
-   ```YAML
-   # 省略上面的内容
-   # Deployment
-   ## Docs: https://hexo.io/docs/deployment.html
-   deploy:
-     type: git
-     repo: https://github.com/jackfrued/jackfrued.github.io.git
-     branch: master
-   ```
+```YAML
+# 省略上面的内容
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: https://github.com/jackfrued/jackfrued.github.io.git
+  branch: master
+```
 
    上面的配置中，type指定了使用git进行项目部署，repo指定了部署项目的git仓库的URL，我们这里使用的是HTTPS的地址，如果之前配置过密钥对也可以使用SSH的地址，branch指定了将代码同步到仓库中的哪一个分支，通常master分支就是发布项目最终工作成果的分支，也称为项目的主分支。
 
 3. 安装名为`hexo-deployer-git`的部署器插件，通过该插件就能实现一键部署。
 
-   ```Shell
-   npm install hexo-deployer-git --save
-   ```
+```Shell
+npm install hexo-deployer-git --save
+```
 
 4. 可以使用下面的命令来实现一键部署到GitHub。
 
-   ```Shell
-   hexo deploy -g
-   ```
+```Shell
+hexo deploy -g
+```
 
    或者
 
-   ```Shell
-   hexo generate -d
-   ```
+```Shell
+hexo generate -d
+```
 
 5. 接下来在浏览器中输入[jackfrued.github.io](https://jackfrued.github.io)就能够看到自己的博客，现在全世界的人都可以通过这个URL来访问你的博客。大家是否注意到，访问你博客的这个URL就是刚才我们给仓库起的名字，因为你在GitHub上注册的用户名是独一无二的，所以这个域名也是全世界独一无二的。
 

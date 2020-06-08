@@ -554,10 +554,10 @@
 
   - 通过模型创建表（正向工程）
 
-    ```Shell
-    python manage.py makemigrations app
-    python manage.py migrate
-    ```
+```Shell
+python manage.py makemigrations app
+python manage.py migrate
+```
 
   - 使用PowerDesigner绘制物理模型图。
 
@@ -565,9 +565,9 @@
 
   - 通过数据表创建模型（反向工程）
 
-    ```Shell
-    python manage.py inspectdb > app/models.py
-    ```
+```Shell
+python manage.py inspectdb > app/models.py
+```
 
 
 #### 第92天：[Docker的使用](./Day91-100/92.Docker在项目中的应用.md)
